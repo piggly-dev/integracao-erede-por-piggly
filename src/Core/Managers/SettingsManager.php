@@ -247,7 +247,7 @@ class SettingsManager
 			],
 			'debit' => [
 				'enabled' => false,
-				'title' => __('Cartão de Crédito', 'pgly_erede_gateway'),
+				'title' => __('Cartão de Débito', 'pgly_erede_gateway'),
 				'waiting_status' => 'on-hold',
 				'paid_status' => 'processing'
 			],
