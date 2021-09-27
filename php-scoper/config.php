@@ -117,10 +117,10 @@ $config['patchers'][] = function ( $file_path, $prefix, $content ) {
 		$content = str_replace("\\$prefix\\register_deactivation_hook", '\\register_deactivation_hook', $content);
 		$content = str_replace("\\$prefix\\check_ajax_referer", '\\check_ajax_referer', $content);
 		$content = str_replace("\\$prefix\\current_user_can", '\\current_user_can', $content);
-		$content = str_replace("Piggly\\\\WooPixGateway\\\\Vendor\\\\WP_DEBUG", 'WP_DEBUG', $content);
-		$content = str_replace("Piggly\\\\WooPixGateway\\\\Vendor\\\\SCRIPT_DEBUG", 'SCRIPT_DEBUG', $content);
-		$content = str_replace("Piggly\\\\WooPixGateway\\\\Vendor\\\\wp_doing_ajax", 'wp_doing_ajax', $content);
-		$content = str_replace("Piggly\\\\WooPixGateway\\\\Vendor\\\\DOING_AJAX", 'DOING_AJAX', $content);
+		$content = str_replace("Piggly\\\\WooERedeGateway\\\\Vendor\\\\WP_DEBUG", 'WP_DEBUG', $content);
+		$content = str_replace("Piggly\\\\WooERedeGateway\\\\Vendor\\\\SCRIPT_DEBUG", 'SCRIPT_DEBUG', $content);
+		$content = str_replace("Piggly\\\\WooERedeGateway\\\\Vendor\\\\wp_doing_ajax", 'wp_doing_ajax', $content);
+		$content = str_replace("Piggly\\\\WooERedeGateway\\\\Vendor\\\\DOING_AJAX", 'DOING_AJAX', $content);
 		return $content;
 	}
 

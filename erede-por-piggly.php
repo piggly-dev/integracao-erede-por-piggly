@@ -1,8 +1,8 @@
 <?php
 /**
  * @link https://studio.piggly.com.br/
- * @since 2.0.0
- * @version 2.0.0
+ * @since 1.0.0
+ * @version 1.0.0
  * @package \Piggly\WooERedeGateway
  * @author Caique Araujo <caique@piggly.com.br>
  * @author Piggly Lab <dev@piggly.com.br>
@@ -115,13 +115,12 @@ if ( pgly_erede_gateway_requirements() )
 	{
 		// Prepare plugin runtime settings
 		$plugin =
-			(new Plugin('pgly_erede_gateway', 'pgly_erede_gateway', SettingsManager::defaults()))
+			(new Plugin('pgly_erede_gateway', 'pgly_erede_gateway_settings', SettingsManager::defaults()))
 			->abspath(__FILE__)
 			->url(__FILE__)
 			->basename(__FILE__)
 			->name('pgly_erede_gateway')
 			->version(PGLY_EREDE_GATEWAY_VERSION)
-			->dbVersion(PGLY_EREDE_GATEWAY_DBVERSION)
 			->minPhpVersion(PGLY_EREDE_GATEWAY_PHPVERSION);
 
 		$core = new Core(

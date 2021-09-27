@@ -167,7 +167,7 @@ gulp.task( 'build:fresh', function () {
 // Create assets
 gulp.task( 'build:assets:create', function ( cb ) {
 	exec(
-		'cd src-assets && npm install && npm run js:build && npm run css:deploy',
+		'cd src-assets && npm install && npm run js:build',
 		function ( err, stdout, stderr ) {
 			console.log( stdout );
 			console.log( stderr );

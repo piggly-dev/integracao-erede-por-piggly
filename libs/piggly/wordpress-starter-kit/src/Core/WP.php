@@ -58,11 +58,11 @@ class WP
     public static function is_doing_ajax() : bool
     {
         // Return WordPress native function if exists
-        if (\function_exists('Piggly\\WooERedeGateway\\Vendor\\wp_doing_ajax')) {
+        if (\function_exists('wp_doing_ajax')) {
             return wp_doing_ajax();
         }
         // Check for ajax constant variable
-        return \defined('Piggly\\WooERedeGateway\\Vendor\\DOING_AJAX') && DOING_AJAX;
+        return \defined('DOING_AJAX') && DOING_AJAX;
     }
     /**
      * Check if "I am" in the Admin Panel.
@@ -102,7 +102,7 @@ class WP
      */
     public static function is_debugging() : bool
     {
-        return \defined('Piggly\\WooERedeGateway\\Vendor\\WP_DEBUG') && WP_DEBUG;
+        return \defined('WP_DEBUG') && WP_DEBUG;
     }
     /**
      * Get the postfix for assets files - ".min" or empty
@@ -113,7 +113,7 @@ class WP
      */
     public static function minify() : string
     {
-        return \defined('Piggly\\WooERedeGateway\\Vendor\\SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
+        return \defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
     }
     /**
      * Check whether the string is a JSON or not.
