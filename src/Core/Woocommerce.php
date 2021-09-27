@@ -1,6 +1,8 @@
 <?php
 namespace Piggly\WooERedeGateway\Core;
 
+use Piggly\WooERedeGateway\Core\Gateway\CreditGateway;
+use Piggly\WooERedeGateway\Core\Gateway\DebitGateway;
 use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Core\Scaffold\Initiable;
 use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Core\WP;
 
@@ -46,6 +48,27 @@ class Woocommerce extends Initiable
 		array_push( $gateways, CreditGateway::class );
 		array_push( $gateways, DebitGateway::class );
 		return $gateways;
+	}
+	
+	/**
+	 * Add notice to Woocommerce.
+	 *
+	 * @param string $message
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public static function add_notice (
+		string $message
+	)
+	{
+		global $woocommerce;
+
+		$title = '<strong>Ocorreu um erro:</strong> ';
+
+		if ( function_exists( 'wc_add_notice' ) ) 
+		{ \wc_add_notice( $title . $message, 'error' ); } 
+		else 
+		{ $woocommerce->add_error( $title . $message ); }
 	}
 
 	/**

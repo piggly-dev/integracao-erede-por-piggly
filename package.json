@@ -1,7 +1,7 @@
 {
-	"name": "pix-por-piggly",
-	"version": "2.0.22",
-	"description": "Implemente o Pix de uma forma simples e rápida em sua loja Woocommerce.",
+	"name": "erede-por-piggly",
+	"version": "1.0.0",
+	"description": "Gateway de pagamento e-Rede para compras em crédito e débito na sua loja Woocommerce.",
 	"private": true,
 	"devDependencies": {
 		"del": "^6.0.0",

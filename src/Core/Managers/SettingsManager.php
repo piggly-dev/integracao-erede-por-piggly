@@ -116,10 +116,11 @@ class SettingsManager
 			$data,
 			[
 				'debug' => [ 'default' => false, 'sanitize' => \FILTER_VALIDATE_BOOLEAN ],
-				'env' => [ 'default' => 'test', 'sanitize' => \FILTER_VALIDATE_BOOLEAN, 'allowed' => ['test', 'prod'] ],
+				'env' => [ 'default' => 'test', 'sanitize' => \FILTER_SANITIZE_STRING, 'allowed' => ['test', 'prod'] ],
 				'pv' => [ 'default' => '', 'sanitize' => \FILTER_SANITIZE_STRING ],
 				'token' => [ 'default' => '', 'sanitize' => \FILTER_SANITIZE_STRING ],
 				'soft_descriptor' => [ 'default' => '', 'sanitize' => \FILTER_SANITIZE_STRING ],
+				'auto_refund' => [ 'default' => false, 'sanitize' => \FILTER_VALIDATE_BOOLEAN ],
 				'cron_frequency' => [ 'default' => 'everyfifteen', 'sanitize' => \FILTER_SANITIZE_STRING, 'allowed' => Cron::AVAILABLE_FREQUENCIES ],
 			]
 		);
@@ -149,7 +150,6 @@ class SettingsManager
 				'waiting_status' => [ 'default' => 'on-hold', 'sanitize' => \FILTER_SANITIZE_STRING ],
 				'paid_status' => [ 'default' => 'processing', 'sanitize' => \FILTER_SANITIZE_STRING ],
 				'auto_capture' => [ 'default' => false, 'sanitize' => \FILTER_VALIDATE_BOOLEAN ],
-				'auto_refund' => [ 'default' => false, 'sanitize' => \FILTER_VALIDATE_BOOLEAN ],
 				'min_parcels_value' => [ 'default' => 0, 'sanitize' => \FILTER_VALIDATE_INT ],				
 				'max_parcels_number' => [ 'default' => 1, 'sanitize' => \FILTER_VALIDATE_INT ],				
 				'partner_module' => [ 'default' => '', 'sanitize' => \FILTER_SANITIZE_STRING ],
@@ -157,7 +157,7 @@ class SettingsManager
 			]
 		);	
 		
-		if ( $settings->get('enabled', false) && $this->canEnable() )
+		if ( $settings->get('enabled', false) && !static::canEnable() )
 		{ throw new Exception(CoreConnector::__translate('Configure o PV e o Token antes de habilitar')); }
 	}
 
@@ -179,14 +179,13 @@ class SettingsManager
 			$data,
 			[
 				'enabled' => [ 'default' => false, 'sanitize' => \FILTER_VALIDATE_BOOLEAN ],
-				'title' => [ 'default' => CoreConnector::__translate('Cartão de Crédito'), 'sanitize' => \FILTER_SANITIZE_STRING ],
+				'title' => [ 'default' => CoreConnector::__translate('Cartão de Débito'), 'sanitize' => \FILTER_SANITIZE_STRING ],
 				'waiting_status' => [ 'default' => 'on-hold', 'sanitize' => \FILTER_SANITIZE_STRING ],
 				'paid_status' => [ 'default' => 'processing', 'sanitize' => \FILTER_SANITIZE_STRING ],
-				'auto_refund' => [ 'default' => false, 'sanitize' => \FILTER_VALIDATE_BOOLEAN ],
 			]
 		);	
 		
-		if ( $settings->get('enabled', false) && $this->canEnable() )
+		if ( $settings->get('enabled', false) && !static::canEnable() )
 		{ throw new Exception(CoreConnector::__translate('Configure o PV e o Token antes de habilitar')); }
 	}
 
@@ -232,6 +231,7 @@ class SettingsManager
 				'pv' => '',
 				'token' => '',
 				'soft_descriptor' => '',
+				'auto_refund' => false,
 				'cron_frequency' => 'everyfifteen'
 			],
 			'credit' => [
@@ -240,7 +240,6 @@ class SettingsManager
 				'waiting_status' => 'on-hold',
 				'paid_status' => 'processing',
 				'auto_capture' => false,
-				'auto_refund' => false,
 				'min_parcels_value' => 0,
 				'max_parcels_number' => 1,
 				'partner_module' => '',
@@ -250,8 +249,7 @@ class SettingsManager
 				'enabled' => false,
 				'title' => __('Cartão de Crédito', 'pgly_erede_gateway'),
 				'waiting_status' => 'on-hold',
-				'paid_status' => 'processing',
-				'auto_refund' => false
+				'paid_status' => 'processing'
 			],
 		];
 
@@ -274,7 +272,7 @@ class SettingsManager
 	 * @since 1.0.0
 	 * @return boolean
 	 */
-	private function canEnable ()
+	public static function canEnable ()
 	{
 		return 
 			!empty(CoreConnector::settings()->get('global')->get('pv'))
