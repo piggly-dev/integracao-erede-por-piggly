@@ -12,17 +12,17 @@
  * or later, available here http://www.gnu.org/licenses/gpl-3.0.txt
  *
  * @wordpress-plugin
- * Plugin Name:       e-Rede por Piggly (para Woocommerce)
+ * Plugin Name:       e-Rede por Piggly
  * Plugin URI:        https://studio.piggly.com.br/
  * Description:       O melhor pagamento via e-Rede para o Woocomerce. Disponibilize pagamentos via crédito e débito com e-Rede.
  * Requires at least: 4.0
  * Requires PHP:      7.2
  * Version:           1.0.0
  * Author:            Piggly Lab
- * Author URI:        https://studio.piggly.com.br/
+ * Author URI:        https://github.com/piggly-dev
  * License:           GPLv3 or later
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       erede-por-piggly
+ * Text Domain:       pgly_erede_gateway
  * Domain Path:       /languages 
  * Network:           false
  */

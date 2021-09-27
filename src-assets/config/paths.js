@@ -5,4 +5,4 @@ module.exports = {
 	src: path.resolve(__dirname, '..'),
 	// Production build files
 	build: path.resolve(__dirname, '..', '..', 'assets', 'js'),
-}
+};
