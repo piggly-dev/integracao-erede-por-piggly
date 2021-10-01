@@ -1,6 +1,16 @@
-# Integração e-Rede por Piggly
+=== Integração e-Rede por Piggly ===
 
-![Branch Lançamento](https://img.shields.io/badge/branch%2Fmain-v1.x.x-brightgreen?style=flat-square) ![Branch Desenvolvimento](https://img.shields.io/badge/branch%2Fdev-dev%20v1.x.x-orange?style=flat-square) ![Versão Atual](https://img.shields.io/badge/version-v1.0.0-brightgreen?style=flat-square) ![PHP](https://img.shields.io/badge/php-%5E7.2%20%7C%20%5E8.0-blue?style=flat-square) ![Software License](https://img.shields.io/badge/license-GPL%203.0-brightgreen?style=flat-square)
+Contributors: pigglydev, caiquearaujo
+Tags: woocommerce, payment, e-rede, cartao, credito, debito, e-commerce, shop, ecommerce, pagamento
+Requires at least: 4.0
+Requires PHP: 7.2
+Tested up to: 5.8
+Stable tag: 1.0.0
+License: GPLv3 or later
+Language: pt_BR 
+License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+
+== Integração e-Rede por Piggly ==
 
 O melhor plugin para pagamentos via Cartão de Crédito e Cartão de Débito utilizando a plataforma e-Rede no Woocommerce. Veja todos os detalhes abaixo.
 
@@ -12,11 +22,11 @@ O melhor plugin para pagamentos via Cartão de Crédito e Cartão de Débito uti
 
 > Não esqueça de deixar a sua avaliação sobre o plugin! Isso nos incentivará a lançar mais atualizações e continuar prestando um suporte de qualidade.
 
-## Como funciona?
+== Como funciona? ==
 
 O plugin foi desenvolvido com suporte ao **WooCommerce 4+** e **WordPress 5+** e habilita o processo de comunicação entre a sua loja virtual e a API de pagamentos da e-Rede. Com isso, seus clientes poderão fazer compras no crédito e no débito de modo transparente e seguro, sem redirecionamentos.
 
-## Lei Geral de Proteção de Dados
+== Lei Geral de Proteção de Dados ==
 
 Este plugin não armazena nenhum dado do cartão. Os dados são enviados diretamente para e-Rede e armazenará nos dados do pedido apenas os quatro últimos digitos do cartão para fins fiscais e de confirmação de dados.
 
@@ -24,7 +34,7 @@ Ainda é necessário ter um certificado SSL homologado para utilização dos ser
 
 É responsabilidade do controlador de dados, aquele que instalou o plugin, garantir a segurança dos dados transitados entre sua instância do Wordpress e a API da e-Rede. A responsabilidade deste plugin é, apenas, intermediar o pagamento tornando possuí um checkout transparente no Woocommerce.
 
-## Requisitos
+== Requisitos ==
 
 Antes de iniciar a integração e habilitar o plugin, será necessário gerar a chave de integração no portal da Rede para a sua conta credenciada com a e-Rede. Siga os seguintes passos:
 
@@ -35,21 +45,21 @@ Antes de iniciar a integração e habilitar o plugin, será necessário gerar a 
 
 Nas configurações do plugin, disponíveis em **e-Rede > Configurações**, insira o número de filiação e a chave de integração na tela principal. Posteriormente, você pode habilitar e configurações os pagamentos via crédito e débito.
 
-### Homologação
+= Homologação =
 
 Se você tem interesse de testar o plugin, mantenha o ambiente no modo **Teste** nas configurações do plugin, cadastre-se no [Portal dos Desenvolvedores](https://www.userede.com.br/desenvolvedores) para criar um PV e uma Chave de Integração de testes. Depois, faça as compras utilizando os cartões de teste disponibilizados pela e-Rede [clicando aqui](https://www.userede.com.br/desenvolvedores/pt/produto/e-Rede#tutorial-cartao).
 
-### Função Débito
+= Função Débito =
 
 A função débito utiliza a autenticação 3DS para cartões Visa e Mastercard. Para ativar é necessário entrar em contato com a plataforma da e-Rede e solicitar a ativação. Saiba mais [clicando aqui](https://www.userede.com.br/desenvolvedores/pt/produto/e-Rede#documentacao-3ds).
 
-## Como instalar?
+== Como instalar? ==
 
-### No diretório oficial do Wordpress
+= No diretório oficial do Wordpress =
 
 A página oficial do plugin pode ser encontrada em: [wordpress@erede-por-piggly](https://wordpress.org/plugins/erede-por-piggly/).
 
-### No repositório do Github
+= No repositório do Github =
 
 Vá para [Releases](https://github.com/piggly-dev/integracao-erede-por-piggly/releases) neste repositório e faça o download em `.zip` da versão mais recente.
 
@@ -57,7 +67,7 @@ Então, no **Painel Administrativo** do Wordpress, vá em `Plugins > Adicionar n
 
 > Você precisará, posteriormente, ir até a pasta do plugin no terminal do seu servidor Web e executar o comando `composer install` caso escolha essa opção.
 
-### Da origem
+= Da origem =
 
 Você precisará do Git instalado para contruir da origem. Para completar os passos a seguir, você precisará abrir um terminal de comando. Clone o repositório:
 
@@ -65,20 +75,27 @@ Você precisará do Git instalado para contruir da origem. Para completar os pas
 
 > Não recomendamos este processo de instalação a não ser que você saiba o que está fazendo.
 
-## Changelog
+== Screenshots ==
 
-Veja o arquivo [CHANGELOG](./CHANGELOG.md) para informações sobre todas as mudanças no código.
+1. Configurações gerais;
+2. Configurações de crédito;
+3. Configurações de débito;
+4. Pagamento no carrinho de compras.
 
-## Desenvolvimento
+== Changelog ==
 
-Veja o arquivo [CONTRIBUTING](./CONTRIBUTING.md) para todas as informações a respeito das regras de conduta do desenvolvimento e organização do código.
+Veja o arquivo [CHANGELOG](https://github.com/piggly-dev/integracao-erede-por-piggly/CHANGELOG.md) para informações sobre todas as mudanças no código.
 
-## Créditos
+== Desenvolvimento ==
+
+Veja o arquivo [CONTRIBUTING](https://github.com/piggly-dev/integracao-erede-por-piggly/CONTRIBUTING.md) para todas as informações a respeito das regras de conduta do desenvolvimento e organização do código.
+
+== Créditos ==
 
 - [Caique Araujo](https://github.com/caiquearaujo)
 - [Piggly Lab](https://github.com/piggly-dev)
-- [Todos os desenvolvedores](../../contributors)
+- [Todos os desenvolvedores](https://github.com/piggly-dev/integracao-erede-por-piggly/graphs/contributors)
 
-## Licenciamento
+== Licenciamento ==
 
-GNU GENERAL PUBLIC LICENSE (GNU v3). Veja [LICENSE](./LICENSE).
+GNU GENERAL PUBLIC LICENSE (GNU v3). Veja [LICENSE](https://github.com/piggly-dev/integracao-erede-por-piggly/LICENSE).
