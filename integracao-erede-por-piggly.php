@@ -12,7 +12,7 @@
  * or later, available here http://www.gnu.org/licenses/gpl-3.0.txt
  *
  * @wordpress-plugin
- * Plugin Name:       e-Rede por Piggly
+ * Plugin Name:       Integração e-Rede por Piggly
  * Plugin URI:        https://studio.piggly.com.br/
  * Description:       O melhor pagamento via e-Rede para o Woocomerce. Disponibilize pagamentos via crédito e débito com e-Rede.
  * Requires at least: 4.0
@@ -84,7 +84,7 @@ function pgly_erede_gateway_requirements () : bool
 				?>
 				<div class="notice notice-error">
 					<p>Não é possível habilitar o plugin <strong>e-Rede por Piggly</strong> no momento, certifique-se de atender os seguintes requisitos:</p>
-					<p><?=$e->getMessage();?>.</p>
+					<p><?php echo esc_html($e->getMessage()); ?>.</p>
 				</div>
 				<?php
 

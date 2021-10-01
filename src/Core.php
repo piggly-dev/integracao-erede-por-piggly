@@ -108,7 +108,7 @@ class Core extends WordpressCore
 	 */
 	protected function logger ()
 	{
-		$path = ABSPATH.'wp-content/erede-por-piggly/';
+		$path = \WP_CONTENT_DIR.'integracao-erede-por-piggly/';
 
 		if ( !\is_dir($path) )
 		{ wp_mkdir_p($path); }
@@ -119,7 +119,7 @@ class Core extends WordpressCore
 		$now = (new DateTime('now', wp_timezone()))->format('Y-m-d');
 
 		$hash = \sprintf(
-			'erede-por-piggly-%s-%s.log', 
+			'integracao-erede-por-piggly-%s-%s.log', 
 			$now,
 			\md5($now.\get_option('pgly_erede_gateway_key', 'null'))
 		);

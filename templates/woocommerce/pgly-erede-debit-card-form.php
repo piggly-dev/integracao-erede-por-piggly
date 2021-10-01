@@ -1,8 +1,12 @@
-<?php if ( ! defined( 'ABSPATH' ) ) { exit(); } ?>
+<?php
+
+use Piggly\WooERedeGateway\CoreConnector;
+
+if ( ! defined( 'ABSPATH' ) ) { exit(); } ?>
 <fieldset id="pgly-erede-debit-payment-form" class="pgly-erede-payment-form">
     <p class="form-row form-row-wide">
       <label for="pgly-erede-card-number">
-			<?=__('Número do cartão', 'erede-por-piggly');?>
+			<?php echo esc_html(CoreConnector::__translate('Número do cartão')); ?>
 			<span class="required">*</span>
 		</label> 
 		<input 
@@ -16,7 +20,7 @@
    </p>
    <p class="form-row form-row-wide">
       <label for="pgly-erede-card-holder-name">
-			<?=__('Nome impresso no cartão', 'erede-por-piggly');?>
+			<?php echo esc_html(CoreConnector::__translate('Nome impresso no cartão')); ?>
 			<span class="required">*</span>
 		</label>
 			<input 
@@ -28,7 +32,7 @@
    </p>
    <p class="form-row form-row-first">
       <label for="pgly-erede-card-expiry">
-			<?=__('Validade do cartão', 'erede-por-piggly');?>
+			<?php echo esc_html(CoreConnector::__translate('Validade do cartão')); ?>
 			<span class="required">*</span>
 		</label> 
 			<input 
@@ -42,7 +46,7 @@
 	</p>
 	<p class="form-row form-row-last">
 		<label for="pgly-erede-card-cvv">
-			<?=__('Código de segurança', 'erede-por-piggly');?>
+			<?php echo esc_html(CoreConnector::__translate('Código de segurança')); ?>
 			<span class="required">*</span>
 		</label> 
 		<input 

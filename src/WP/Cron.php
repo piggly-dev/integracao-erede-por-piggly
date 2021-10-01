@@ -1,12 +1,16 @@
 <?php
 namespace Piggly\WooERedeGateway\WP;
 
+use Piggly\WooERedeGateway\Core\Api\Payload;
+use Piggly\WooERedeGateway\Core\Gateway\AbstractGateway;
 use Piggly\WooERedeGateway\CoreConnector;
 
 use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Core\Scaffold\Initiable;
 use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Core\WP;
 use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Plugin;
 use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Settings\KeyingBucket;
+
+use WC_Order;
 
 /**
  * Cronjob tasks.

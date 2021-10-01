@@ -67,7 +67,7 @@ class Admin extends Initiable
 	{
 		add_menu_page(
 			CoreConnector::__translate('Configurações'),
-			CoreConnector::__translate('e-Rede'),
+			CoreConnector::__translate('e-Rede por Piggly'),
 			'manage_woocommerce',
 			CoreConnector::domain(),
 			[$this, 'settings_page'],
@@ -192,7 +192,7 @@ class Admin extends Initiable
 			<p>
 				O <strong>Modo Debug</strong> do plugin <strong>e-Rede por Piggly</strong>
 				está ativado, só mantenha este modo ativado para testes ou detecções de erros.
-				<a href="<?=admin_url('admin.php?page='.$this->_plugin->getDomain())?>">
+				<a href="<?php echo esc_url(admin_url('admin.php?page='.$this->_plugin->getDomain())); ?>">
 				Clique aqui</a> para ir para as configurações do plugin.
 			</p>
 		</div>
