@@ -10,8 +10,8 @@ const gulp = require('gulp'),
 		exec = require( 'child_process' ).exec;
 
 const plugin = {
-	name: 'e-Rede por Piggly',
-	slug: 'erede-por-piggly',
+	name: 'Integração eRede por Piggly',
+	slug: 'integracao-erede-por-piggly',
 	files: [
 		'**',
 		// Exclude all below

@@ -1,8 +1,8 @@
 {
-	"name": "piggly/woo-erede-por-piggly",
+	"name": "piggly/integracao-erede-por-piggly",
 	"description": "Gateway de pagamento e-Rede para compras em crédito e débito na sua loja Woocommerce.",
 	"type": "wordpress-plugin",
-	"homepage": "https://github.com/piggly-dev/woo-erede-por-piggly",
+	"homepage": "https://github.com/piggly-dev/integracao-erede-por-piggly",
 	"license": "GPL-3.0-or-later",
 	"minimum-stability": "stable",
 	"prefer-stable": true,

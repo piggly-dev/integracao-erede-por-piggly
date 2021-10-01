@@ -1,6 +1,29 @@
 <template>
 	<div class="pgly-wps--space"></div>
 	<h1 class="pgly-wps--title">Configurações Gerais</h1>
+
+	<pgly-row>
+		<pgly-column>
+			<pgly-notification color="warning">
+				<strong>Enfrentando algum problema?</strong> Visite nosso
+				fórum de suporte, respondemos em até 3 dias úteis ou menos.
+			</pgly-notification>
+			
+			<pgly-notification color="success">
+				<strong>Gostou o bastante? 👍</strong> 
+				Se você apreciar a função deste plugin e quiser apoiar 
+				este trabalho para que continuemos atualizando, sinta-se
+				livre para fazer qualquer doação para a chave aleatória Pix 
+				<code>285fb964-0087-4a94-851a-5a161ed8888a</code> ❤.
+			</pgly-notification>
+
+			<pgly-link-button
+				label="Avaliar o Plugin"
+				color="primary"
+				target="_blank"
+				link="https://wordpress.org/plugins/integracao-erede-por-piggly/#reviews"/>
+		</pgly-column>
+	</pgly-row>
 	
 	<pgly-row>
 		<pgly-column>
@@ -136,7 +159,7 @@
 				v-model="fields.debug.value"
 				@afterChange="onChanged">
 				<template v-slot:description>
-					Utilize apenas para inspecionar erros ou processos. 
+					Utilize apenas para inspecionar erros, testes ou processos que precisam de atenção. 
 					Mensagens de log em excesso podem ser criadas quando ativado.
 				</template>
 			</pgly-basic-checkbox>

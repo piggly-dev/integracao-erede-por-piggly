@@ -247,7 +247,7 @@ class Ajax extends Ajaxable
 			->prepare('pgly_erede_gateway_admin', 'xSecurity')
 			->need_capability('manage_woocommerce');
 
-		$path  = ABSPATH.'wp-content/erede-por-piggly/';
+		$path  = \WP_CONTENT_DIR.'integracao-erede-por-piggly/';
 		$files = [];
 		$files = glob($path.'*.log');
 

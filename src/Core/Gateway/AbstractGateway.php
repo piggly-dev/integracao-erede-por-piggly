@@ -123,9 +123,9 @@ abstract class AbstractGateway extends WC_Payment_Gateway
 	public function payment_fields() 
 	{
 		if ( $description = $this->get_description() ) 
-		{ echo wpautop( wptexturize( $description ) ); }
+		{ echo \wpautop( \wptexturize( \esc_html( $description ) ) ); }
 
-		wp_enqueue_script( 'wc-credit-card-form' );
+		\wp_enqueue_script( 'wc-credit-card-form' );
 		$this->get_checkout_form($this->get_order_total());
 	}
 
@@ -185,14 +185,14 @@ abstract class AbstractGateway extends WC_Payment_Gateway
 		switch ( $status )
 		{
 			case $this->get_waiting_status():
-				echo '<div class="woocommerce-message">Seu pagamento já está sendo processado. Para mais informações, <a href="' . esc_url( $order_url ) . '" class="button" style="display: block !important; visibility: visible !important;">veja os detalhes do pedido</a><br /></div>';
+				echo '<div class="woocommerce-message">Seu pagamento já está sendo processado. <a href="' . esc_url( $order_url ) . '" class="button" style="display: block !important; visibility: visible !important;">Ver detalhes do pedido</a><br /></div>';
 				break;
 			case $this->get_paid_status():
-				echo '<div class="woocommerce-message">Seu pagamento foi aprovado. Para mais informações, <a href="' . esc_url( $order_url ) . '" class="button" style="display: block !important; visibility: visible !important;">veja os detalhes do pedido</a><br /></div>';
+				echo '<div class="woocommerce-message">Seu pagamento foi aprovado. <a href="' . esc_url( $order_url ) . '" class="button" style="display: block !important; visibility: visible !important;">Ver detalhes do pedido</a><br /></div>';
 				break;
 			default:
-			echo '<div class="woocommerce-info">Para mais informações, <a href="' . esc_url( $order_url ) . '" class="button" style="display: block !important; visibility: visible !important;">veja os detalhes do pedido</a><br /></div>';
-			break;
+				echo '<div class="woocommerce-info">Seu pagamento já está sendo processado. <a href="' . esc_url( $order_url ) . '" class="button" style="display: block !important; visibility: visible !important;">Ver detalhes do pedido</a><br /></div>';
+				break;
 		}
 	}
 

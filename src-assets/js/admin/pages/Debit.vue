@@ -17,6 +17,12 @@
 		Antes de habilitar o método de pagamento, não se esqueça
 		de preencher o PV e o Token na aba "Principal".
 	</pgly-notification>
+	
+	<pgly-notification color="warning">
+		A função débito utiliza a autenticação 3DS. Esta função de segurança
+		precisa ser autorizada para a sua conta da e-Rede, saiba mais <a href="https://www.userede.com.br/desenvolvedores/pt/produto/e-Rede#documentacao-3ds" target="_blank">
+		clicando aqui</a>.
+	</pgly-notification>
 
 	<pgly-row>
 		<pgly-column>
