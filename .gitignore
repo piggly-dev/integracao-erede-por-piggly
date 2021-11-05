@@ -14,6 +14,8 @@ Docker/data
 coverage
 rules
 debug
+.DS_Store
+._*
 
 # - INCLUDE
 !/assets/*
