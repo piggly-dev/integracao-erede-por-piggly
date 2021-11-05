@@ -1,6 +1,6 @@
 # Integração e-Rede por Piggly
 
-![Branch Lançamento](https://img.shields.io/badge/branch%2Fmain-v1.x.x-brightgreen?style=flat-square) ![Branch Desenvolvimento](https://img.shields.io/badge/branch%2Fdev-dev%20v1.x.x-orange?style=flat-square) ![Versão Atual](https://img.shields.io/badge/version-v1.0.0-brightgreen?style=flat-square) ![PHP](https://img.shields.io/badge/php-%5E7.2%20%7C%20%5E8.0-blue?style=flat-square) ![Software License](https://img.shields.io/badge/license-GPL%203.0-brightgreen?style=flat-square)
+![Versão Atual](https://img.shields.io/badge/version-v1.0.1-brightgreen?style=flat-square) ![PHP](https://img.shields.io/badge/php-%5E7.2%20%7C%20%5E8.0-blue?style=flat-square) ![Software License](https://img.shields.io/badge/license-GPL%203.0-brightgreen?style=flat-square)
 
 O melhor plugin para pagamentos via Cartão de Crédito e Cartão de Débito utilizando a plataforma e-Rede no Woocommerce. Veja todos os detalhes abaixo.
 

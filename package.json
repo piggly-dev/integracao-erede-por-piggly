@@ -1,6 +1,6 @@
 {
 	"name": "integracao-erede-por-piggly",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Gateway de pagamento e-Rede para compras em crédito e débito na sua loja Woocommerce.",
 	"private": true,
 	"devDependencies": {

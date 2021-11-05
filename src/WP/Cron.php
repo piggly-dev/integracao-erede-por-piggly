@@ -76,12 +76,16 @@ class Cron extends Initiable
 	{
 		WC()->mailer();
 		
+		$settings = $this->_plugin->settings()->bucket();
 		CoreConnector::debugger()->debug('Iniciando a tarefa cron para leitura dos pagamentos pendentes via e-Rede');
 		
 		$orders = wc_get_orders(array(
 			'limit'          => -1,
 			'payment_method' => array( 'pgly_erede_gateway_debit', 'pgly_erede_gateway_credit' ),
-			'status'         => $this->waiting_status
+			'status'         => [
+				$settings->get('credit', new KeyingBucket())->get('waiting_status', 'on-hold'),
+				$settings->get('debit', new KeyingBucket())->get('waiting_status', 'on-hold')
+			]
 		));
 
 		foreach ( $orders as $order )

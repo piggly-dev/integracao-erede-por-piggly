@@ -1,3 +1,9 @@
 # Changelog
 
-## [WIP]
+## `1.0.0` em `2021-01-10`
+
+* Primeiro release;
+
+## `1.0.1` em `2021-11-05`
+
+* Correção de bug na cronjob;
