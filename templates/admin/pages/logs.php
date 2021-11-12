@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 $plugin = CoreConnector::plugin();
 
-$path  = WP_CONTENT_DIR.'integracao-erede-por-piggly/';
+$path  = WP_CONTENT_DIR.'/integracao-erede-por-piggly/';
 $files = [];
 $files = glob($path.'*.log');
 

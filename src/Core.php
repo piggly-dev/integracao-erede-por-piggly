@@ -108,7 +108,7 @@ class Core extends WordpressCore
 	 */
 	protected function logger ()
 	{
-		$path = \WP_CONTENT_DIR.'integracao-erede-por-piggly/';
+		$path = \WP_CONTENT_DIR.'/integracao-erede-por-piggly/';
 
 		if ( !\is_dir($path) )
 		{ wp_mkdir_p($path); }
