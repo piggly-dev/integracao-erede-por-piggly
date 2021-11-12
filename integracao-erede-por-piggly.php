@@ -17,7 +17,7 @@
  * Description:       O melhor pagamento via e-Rede para o Woocomerce. Disponibilize pagamentos via crédito e débito com e-Rede.
  * Requires at least: 4.0
  * Requires PHP:      7.2
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Piggly Lab
  * Author URI:        https://github.com/piggly-dev
  * License:           GPLv3 or later
@@ -40,7 +40,7 @@ use Piggly\WooERedeGateway\Vendor\Piggly\Wordpress\Plugin;
 if ( ! defined( 'WPINC' ) ) exit;
 
 /** @var string Currently plugin version. Start at version 1.0.0 and use SemVer - https://semver.org */
-if (!defined('PGLY_EREDE_GATEWAY_VERSION')) define( 'PGLY_EREDE_GATEWAY_VERSION', '1.0.1' );
+if (!defined('PGLY_EREDE_GATEWAY_VERSION')) define( 'PGLY_EREDE_GATEWAY_VERSION', '1.0.2' );
 
 /** @var string Minimum php version required. */
 if (!defined('PGLY_EREDE_GATEWAY_PHPVERSION')) define( 'PGLY_EREDE_GATEWAY_PHPVERSION', '7.2' );
